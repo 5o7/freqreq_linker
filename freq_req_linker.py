@@ -1,3 +1,5 @@
+# Import tools
+
 from googlesearch import search
 from bs4 import BeautifulSoup
 import requests
@@ -33,7 +35,7 @@ tables3 = []
 dict = {}
 entry = ""
 
-# From the wiki page, get the category titles, taglines, and tables
+# From the wiki page list, get the category titles, taglines, and tables
 
 for i in wiki:
     titles.append(i.split("|")[0].split("\n")[0])
@@ -175,9 +177,3 @@ for i in range(1, len(titles)):
 # Update the wiki page with the entry
 
 reddit.subreddit("name_of_subreddit").wiki.create(name="wiki_page_to_update", content=entry, reason="Make Links")
-
-
-
-
-
-
